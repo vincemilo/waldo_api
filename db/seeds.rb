@@ -10,7 +10,7 @@
 
 Character.destroy_all
 
-[ { name: "Waldo", x_ratio: 0.37, y_ratio: 0.43 } ].each do |character|
+[ { name: "waldo", x_ratio: 0.37, y_ratio: 0.43 }, { name: "wilma", x_ratio: 0.69, y_ratio: 0.53 }, { name: "wizard", x_ratio: 0.55, y_ratio: 0.29 }, { name: "odlaw", x_ratio: 0.17, y_ratio: 0.31 }  ].each do |character|
   Character.create!(name: character[:name], x_ratio: character[:x_ratio], y_ratio: character[:y_ratio])
 end
 
