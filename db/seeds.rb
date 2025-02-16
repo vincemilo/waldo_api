@@ -15,3 +15,14 @@ Character.destroy_all
 end
 
 p "Created #{Character.count} characters"
+
+HighScore.destroy_all
+
+score = 9999
+characters = Character.all
+
+11.times {
+HighScore.create!(name: characters.find(rand(characters.first.id..characters.first.id + 3)).name.capitalize, time: score)
+score += 1}
+
+p "Created #{HighScore.count} scores"

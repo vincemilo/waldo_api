@@ -3,7 +3,7 @@ class Timer < ApplicationRecord
 
   def calculate_elapsed_time
     if stop_time && start_time
-      (stop_time - start_time) * 95 # Convert to .95 seconds to account for latency
+      (stop_time - start_time) * 100 # Convert to seconds
     else
       0
     end
