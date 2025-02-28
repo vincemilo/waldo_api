@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :characters, except: [ :update, :destroy ]
-  resources :timers, only: [ :create, :destroy ]
+  resources :timers, only: [ :create, :update ]
   resources :high_scores, only: [ :index, :create ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

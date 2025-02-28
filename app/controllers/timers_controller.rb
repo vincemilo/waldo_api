@@ -1,20 +1,19 @@
 class TimersController < ApplicationController
-  before_action :set_timer, only: %i[ destroy ]
+  before_action :set_timer, only: %i[ update ]
 
   def create
     @timer = Timer.new(start_time: Time.current)
     if @timer.save
-      render json: @timer, status: :created, location: @timer
+      render json: @timer, status: :created
     else
       render json: @timer.errors, status: :unprocessable_entity
     end
   end
 
-  def destroy
+  def update
     if @timer.update(stop_time: Time.current)
     @timer.update(elapsed_time: @timer.calculate_elapsed_time)
       render json: @timer
-      @timer.destroy!
     else
       render json: @timer.errors, status: :unprocessable_entity
     end
