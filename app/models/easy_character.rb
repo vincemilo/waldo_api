@@ -1,0 +1,2 @@
+class EasyCharacter < ApplicationRecord
+end
