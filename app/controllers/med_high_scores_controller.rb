@@ -6,7 +6,8 @@ class MedHighScoresController < ApplicationController
   end
 
   def create
-    @high_score = MedHighScore.new(high_score_params)
+    @timer = Timer.find(high_score_params[:time])
+    @high_score = MedHighScore.new(name: high_score_params[:name], time: @timer.elapsed_time)
 
     if @high_score.save
       render json: @high_score, status: :created
