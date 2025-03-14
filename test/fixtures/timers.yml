@@ -2,8 +2,10 @@
 
 one:
   start_time: 2025-01-31 14:22:29
-  end_time: 2025-01-31 14:22:29
+  stop_time: 2025-01-31 14:22:29
+  elapsed_time: 1
 
 two:
   start_time: 2025-01-31 14:22:29
-  end_time: 2025-01-31 14:22:29
+  stop_time: 2025-01-31 14:22:29
+  elapsed_time: 2
