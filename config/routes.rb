@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :characters, only: [ :index, :create ]
-  resources :easy_characters, only: [ :index, :create ]
-  resources :med_characters, only: [ :index, :create ]
+  resources :characters, only: [ :index ]
+  resources :easy_characters, only: [ :index ]
+  resources :med_characters, only: [ :index ]
   resources :timers, only: [ :create, :update ]
-  resources :high_scores, only: [ :index, :create ]
-  resources :easy_high_scores, only: [ :index, :create ]
-  resources :med_high_scores, only: [ :index, :create ]
+  resources :high_scores, only: [ :index ]
+  resources :easy_high_scores, only: [ :index ]
+  resources :med_high_scores, only: [ :index ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
