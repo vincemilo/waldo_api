@@ -1,13 +1,22 @@
-# fly.toml app configuration file generated for waldo-api-red-bush-1989 on 2025-03-17T17:43:29-06:00
+# fly.toml app configuration file generated for waldo-api-cold-brook-7695 on 2025-03-17T11:35:58-06:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'waldo-api-red-bush-1989'
+app = 'waldo-api-cold-brook-7695'
 primary_region = 'den'
 console_command = '/rails/bin/rails console'
 
 [build]
+
+[deploy]
+  release_command = './bin/rails db:prepare'
+
+[env]
+  PORT = '8080'
+
+[processes]
+  app = './bin/rails server'
 
 [http_service]
   internal_port = 8080
