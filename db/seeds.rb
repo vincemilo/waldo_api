@@ -10,7 +10,7 @@
 
 EasyCharacter.destroy_all
 
-[ { name: "waldo", x_ratio: 0.86, y_ratio: 0.74 }, { name: "wilma", x_ratio: 0.49, y_ratio: 0.42 }, { name: "wizard", x_ratio: 0.71, y_ratio: 0.76 }, { name: "odlaw", x_ratio: 0.32, y_ratio: 0.64 }  ].each do |character|
+[ { name: "waldo", x_ratio: 0.86, y_ratio: 0.74 }, { name: "wilma", x_ratio: 0.49, y_ratio: 0.42 }, { name: "wizard", x_ratio: 0.07, y_ratio: 0.76 }, { name: "odlaw", x_ratio: 0.32, y_ratio: 0.64 }  ].each do |character|
   EasyCharacter.create!(name: character[:name], x_ratio: character[:x_ratio], y_ratio: character[:y_ratio])
 end
 
@@ -36,7 +36,7 @@ EasyHighScore.destroy_all
 MedHighScore.destroy_all
 HighScore.destroy_all
 
-score = 9999
+score = 99999
 characters = Character.all
 
 11.times {
